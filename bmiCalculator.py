@@ -1,5 +1,10 @@
 
+name = input("Enter a name:\n")
+weight = int(input("Enter a weight in KGs:\n"))
+height = int(input("Enter a height in CMs:\n"))
+
 def bmi(name, weight, height):
+    height = height / 100
     bmi = weight / (height * height)
     print ("BMI is ", int(bmi))
     if bmi > 30:
@@ -11,4 +16,4 @@ def bmi(name, weight, height):
     else:
         return name + " is Underweight"
 
-print(bmi("omar", 70, 1.72))
+print(bmi(name, weight, height))
